@@ -18,7 +18,7 @@ router.post("/getStatus", async (req, res) => {
       Date: Date,
     });
 
-    res.send({ message: data });
+    res.send(data);
   } catch (e) {
     res.send(e);
   }
@@ -49,7 +49,7 @@ router.post("/addStatus", async (req, res) => {
       });
     }
   } catch (e) {
-    res.json({ success: false });
+    res.json({ success: false, e });
   }
 });
 
